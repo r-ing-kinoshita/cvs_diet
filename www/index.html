@@ -7,6 +7,7 @@
     <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
     <script src="components/loader.js"></script>
     <script src="lib/onsenui/js/onsenui.min.js"></script>
+    <script src="lib/onsenui/js/diet-db.js"></script>
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
     <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
@@ -15,6 +16,12 @@
         td {border: solid 1px #eeeeee}
     </style>
     <script>
+        //ons.bootstrap();
+        ons.ready(function() {
+            //alert('アプリがはじまるよ～');
+            initial_db();
+        });
+    
         // Page init event
         document.addEventListener('init', function(event)
         {
